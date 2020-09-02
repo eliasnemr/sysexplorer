@@ -26,15 +26,48 @@
         <div class="m-2 text-center">
             
             <!-- TITLE -->
-            
 
-            <img src="assets/icon.png" alt="Minima Icon" class="rounded-0 img-fluid" style="width: 45px;">
-            <h5 class="title ml2"> Minima's System Explorer. </h5>
-    
-            <hr class="mb-light-mb-5" style="background-color:#616274;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+                <div class="navbar-brand">
+                    <a href="#" class="navbar-brand">
+                        <h5 class="title ml2"> Minima's System Explorer. </h5>
+                    </a>
+                </div>
+                <button class="navbar-toggler" 
+                        type="button" 
+                        data-toggle="collapse" 
+                        data-target="#navbarToggler" 
+                        aria-controls="navbarToggler" 
+                        aria-expanded="false" 
+                        aria-label="Toggle Navigation">
+                    
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </>
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle" href="#" id="charts-dd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Charts
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="charts-dd">
+                                <li class="dropdown-header">Line charts</li>
+                                <li><a href="#" class="dropdown-item">Blocks/Time Chart</a></li>
+                                <li><a href="#" class="dropdown-item">Hashrate/speed Chart</a></li>
+                                <li><a href="#" class="dropdown-item">Another Chart</a> </li>
+                            </ul>
+                        </li>
+                      </ul>
+                </div>
+            </nav>
+
 
             <!-- welcoming ALERT -->
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <div class="alert alert-warning alert-dismissible fade show mb-5" role="alert">
                 <strong>Welcome to Minima's System Explorer.</strong> If you haven't joined our telegram, join <a href="https://t.me/Minima_Global" class="alert-link" target="_blank">here</a>.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -42,44 +75,65 @@
             </div>
 
 
+        
+            <div class="container">
+                <div class="jumbotron" style="padding: 4rem 1rem !important;"> <!-- hardcoded for fix of header flying around on xs -->
+                    
+                    <h2 class="stats ">
+                        Stats.
+                    </h2>
+                    
+                    <div class="row">
 
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm align-middle">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                            <h5 id="blocks-mined" class="card-title"></h5>
-                            <p class="card-text">Blocks Mined</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Total blocks currently mined in the chain.</h6>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="card" style="width: 18rem;">
+
+                                
                             </div>
                         </div>
-                    </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 stats-blocks">
+                            <div class="card card4blocks">
 
-                    <div class="col-sm ml-5 align-middle">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                            <h5 id="chain-speed" class="card-title" style="font-size: 12px;"></h5>
-                            <p class="card-text">Chainspeed</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Speed of the chain aggregating blocks.</h6>
+                                <div class="lead">Blocks Mined</div>
+
+                                <div class="img rounded m-2">
+                                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-intersect" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2H5zm6-8H6a2 2 0 0 0-2 2v5H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2z"/>
+                                      </svg>
+                                </div>
+
+                                
+                                <div class="card-text" id="blocks-mined"></div>
+
+                                <div class="card-subtitle mt-2 lead">
+                                    Current height number of the chain.
+                                </div>
+
+                                
+
+                            </div>
+
+                            <div class="middle">
+                                <a href="#" class="mid-text btn btn-info">See Chart</a>
+                            </div>
+                        
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="card">
+
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="col-sm ml-5 align-middle">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                            <h5 id="uptime" class="card-title" style="font-size: 12px;"></h5>
-                            <p class="card-text">Uptime</p>
-                            <h6 class="card-subtitle mb-2 text-muted">Uptime of your node synced to the network.</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>   
+                </div>
             </div>
 
+            
+            
+            <!-- Charts -->
             <div class="m-5">
-                <div class="card col-md-6 offset-md-3">
+                <div class="card col-md-6 offset-md-3 blk-card">
                     <canvas id="blocks-canvas"></canvas>
                 </div>
             </div>
@@ -111,8 +165,10 @@
                 chart.update(); // re-render chart
 
                 // Check if too much data, then concatenate
-                if(chart.data.datasets[0].data.length > 15) {
+                if(chart.data.datasets[0].data.length > 20) {
                     chart.data.datasets[0].data.shift();
+                }
+                if(chart.data.labels.length > 25) {
                     chart.data.labels.shift();
                 }
 
@@ -144,7 +200,7 @@
                             type: 'time',
                             time: {
                                 unit: 'seconds',
-                                stepSize: 15,
+                                unitStepSize: 100,
                                 displayFormats: {
                                     seconds: 'h:mm:ss a'
                                 }
@@ -261,5 +317,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+       
     </body>
 </html>

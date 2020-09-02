@@ -1,28 +1,97 @@
 body {
     background-color: #464861;
 }
-.title {
-    color: #ffffff;
+
+/**
+  Stats
+*/
+.blk-card {
+  background-color: #F0F2F7;
 }
-.ml2 {
-    font-weight: 900;
-    font-size: 1.5em;
+.jumbotron {
+  background-color: #F0F2F7;
+}
+.blocks-mined {
+  font-weight: 500;
+  font-size: 2.0rem;
+}
+.stats {
+  text-decoration: underline #464861;
+  text-align: left;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 10;
+  color: #bbbb77;
+  font-weight: 900;
+  bottom: 2.8em;
+  right: 1.0em;
+}
+.card4blocks {
+  padding: 5px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.stats-blocks:hover .card4blocks {
+  opacity: 0.6;
+
+}
+.stats-blocks:hover .middle {
+  opacity: 1.0;
+}
+.btn-info {
+  background-color: #464861;
+}
+.mid-text {
+  font-size: 16px;
+  text-transform: none;
+  color: white;
+}
+.mid-text:hover {
+  text-decoration: none;
+  color: white;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.card-body {
-    height: 200px;
+
+/** 
+Navbar 
+*/
+.navbar-brand {
+  text-align: center;
 }
-.card-text {
-    font-size: 2.5rem !important;
-    font-weight: 600;
+.navbar {
+  background-color: #464861 !important;
+}
+.title {
+  color: #ffffff;
+}
+.ml2 {
+  font-weight: 900;
+  font-size: 1.5em;
 }
 .ml2 .letter {
-    display: inline-block;
-    line-height: 1em;
+  display: inline-block;
+  line-height: 1em;
+  font-size: 18px;
 }
-.blocks {
-    background-color: #766DF4 !important;
-}
+
+
+
+
+
+
+
 
 
 /*
@@ -30,22 +99,22 @@ body {
     https://tobiasahlin.com/spinkit/
 */
 .spinner {
-    margin: 100px auto;
-    width: 40px;
-    height: 40px;
-    position: relative;
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
   }
   
   .cube1, .cube2 {
-    background-color: #333;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
-    animation: sk-cubemove 1.8s infinite ease-in-out;
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
   }
   
   .cube2 {
